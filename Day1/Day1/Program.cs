@@ -8,7 +8,9 @@ namespace Day1
         static void Main(string[] args)
         {
             Expenses expenses = new Expenses();
-            expenses.FindProductWhereNumbersSum2020();
+            int productofTwo = expenses.FindProductWhere2NumbersSum2020();
+            int productOfThree = expenses.FindProductWhere3NumbersSum2020();
+            Console.WriteLine($"\nDay 1, Challenge 1 solution: {productofTwo}.\nDay 1, Challenge 2 solution: {productOfThree}.");
         }
     }
 }
