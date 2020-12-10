@@ -51,13 +51,13 @@ namespace Day2Library
             }
         }
 
-        public int HowManyPasswordsAreValid(List<Password> passwordList)
+        public int HowManyPasswordsAreValidChallenge1(List<Password> passwordList)
         {
             // Check all parsable Password objects in the collection and count how many are valid
             int numberOfValidPasswords = 0;
             foreach (Password password in passwordList)
             {
-                if (CheckPasswordIsValid(password))
+                if (CheckPasswordIsValidChallenge1(password))
                 {
                     numberOfValidPasswords++;
                 }
@@ -65,9 +65,22 @@ namespace Day2Library
             return numberOfValidPasswords;
         }
 
-        public bool CheckPasswordIsValid(Password password)
+        public int HowManyPasswordsAreValidChallenge2(List<Password> passwordList)
         {
-            // Check a single parsable Password object to see if it is valid
+            int numberOfValidPasswords = 0;
+            foreach (Password password in passwordList)
+            {
+                if (CheckPasswordIsValidChallenge2(password))
+                {
+                    numberOfValidPasswords++;
+                }
+            }
+            return numberOfValidPasswords;
+        }
+
+        public bool CheckPasswordIsValidChallenge1(Password password)
+        {
+           // Check a single parsable Password object to see if it is valid, according to policy 1
 
            /* Each line gives the password policy and then the password.
            The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid.
@@ -76,6 +89,17 @@ namespace Day2Library
 
             int keyCharOccurences = password.passwordToCheck.Count(c => c == password.keyChar);
             return keyCharOccurences >= password.minOccurences && keyCharOccurences <= password.maxOccurences;
+        }
+
+        public bool CheckPasswordIsValidChallenge2(Password password)
+        {
+            // Check a single parsable Password object to see if it is valid, according to policy 2
+
+            // Each policy actually describes two positions in the password, where 1 means the first character, 2 means the second character, and so on.
+            // (Be careful; Toboggan Corporate Policies have no concept of "index zero"!) Exactly one of these positions must contain the given letter.
+
+            return (password.passwordToCheck[password.firstIndexToCheck] == password.keyChar && password.passwordToCheck[password.secondIndexToCheck] != password.keyChar) ||
+                   (password.passwordToCheck[password.firstIndexToCheck] != password.keyChar && password.passwordToCheck[password.secondIndexToCheck] == password.keyChar);
         }
 
         public int SetMinOccurences(string refinedData)

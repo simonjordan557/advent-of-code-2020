@@ -45,14 +45,14 @@ namespace Day2Tests
         public void CheckPasswordIsValid_GivenValidPassword_ReturnsTrue()
         {
             Password password = new Password(1, 3, 'a', "fhdgjalkjfuatt");
-            Assert.That(_passwordManager.CheckPasswordIsValid(password), Is.EqualTo(true));
+            Assert.That(_passwordManager.CheckPasswordIsValidChallenge1(password), Is.EqualTo(true));
         }
 
         [Test]
         public void CheckPasswordIsValid_GivenInvalidPassword_ReturnsFalse()
         {
             Password password = new Password(3, 7, 'f', "fjkljkjslkdjf");
-            Assert.That(_passwordManager.CheckPasswordIsValid(password), Is.EqualTo(false));
+            Assert.That(_passwordManager.CheckPasswordIsValidChallenge1(password), Is.EqualTo(false));
         }
 
         [Test]
@@ -73,7 +73,7 @@ namespace Day2Tests
                 new Password(4, 6, 't', "ttgkh")  // invalid
             };
 
-            Assert.That(_passwordManager.HowManyPasswordsAreValid(testData), Is.EqualTo(2));
+            Assert.That(_passwordManager.HowManyPasswordsAreValidChallenge1(testData), Is.EqualTo(2));
         }
     }
 }
