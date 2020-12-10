@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FPS292p8dqhcBFeQxOjPNNVbpJ3rFWekPMljck93BARtQykm3++aqjY2ftc5AvZJ51EZ9Ef8V6ScUXhy/SmHdw==",
+  "success": true,
+  "projectFilePath": "L:\\Backup 19.1.18\\Gamedev\\Visual Studio 2019\\advent-of-code-2020\\AdventOfCodeHelper\\AdventOfCodeHelper\\AdventOfCodeHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
