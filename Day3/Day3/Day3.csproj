@@ -9,4 +9,10 @@
     <ProjectReference Include="..\Day3Library\Day3Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="AdventOfCodeHelper">
+      <HintPath>..\..\AdventOfCodeHelper\AdventOfCodeHelper\bin\Release\netstandard2.0\AdventOfCodeHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

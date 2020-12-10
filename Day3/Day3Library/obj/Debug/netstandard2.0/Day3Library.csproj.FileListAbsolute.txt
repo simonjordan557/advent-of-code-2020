@@ -7,3 +7,6 @@ L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Librar
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\obj\Debug\netstandard2.0\Day3Library.csproj.CoreCompileInputs.cache
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\obj\Debug\netstandard2.0\Day3Library.dll
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\obj\Debug\netstandard2.0\Day3Library.pdb
+L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\bin\Debug\netstandard2.0\AdventOfCodeHelper.dll
+L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\bin\Debug\netstandard2.0\AdventOfCodeHelper.pdb
+L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3Library\obj\Debug\netstandard2.0\Day3Library.csproj.CopyComplete

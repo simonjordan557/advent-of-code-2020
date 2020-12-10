@@ -1,5 +1,6 @@
 ﻿using System;
 using Day3Library;
+using AdventOfCodeHelper;
 
 namespace Day3
 {
@@ -7,7 +8,11 @@ namespace Day3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Toboggan toboggan = new Toboggan(3, 1);
+            toboggan.mountain = Helper.readInData("data.txt");
+            int result = toboggan.HowManyTreeStrikes();
+            Console.WriteLine($"Struck {result} trees.");
+
         }
     }
 }

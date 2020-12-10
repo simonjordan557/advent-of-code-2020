@@ -14,3 +14,5 @@ L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\obj\D
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\obj\Debug\netcoreapp3.1\Day3.dll
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\obj\Debug\netcoreapp3.1\Day3.pdb
 L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\obj\Debug\netcoreapp3.1\Day3.genruntimeconfig.cache
+L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\bin\Debug\netcoreapp3.1\AdventOfCodeHelper.dll
+L:\Backup 19.1.18\Gamedev\Visual Studio 2019\advent-of-code-2020\Day3\Day3\bin\Debug\netcoreapp3.1\AdventOfCodeHelper.pdb

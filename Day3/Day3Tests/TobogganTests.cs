@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Day3Library;
+using AdventOfCodeHelper;
 
 namespace Day3Tests
 {
