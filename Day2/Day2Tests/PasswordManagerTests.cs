@@ -42,14 +42,14 @@ namespace Day2Tests
         }
 
         [Test]
-        public void CheckPasswordIsValid_GivenValidPassword_ReturnsTrue()
+        public void CheckPasswordIsValidChallenge1_GivenValidPassword_ReturnsTrue()
         {
             Password password = new Password(1, 3, 'a', "fhdgjalkjfuatt");
             Assert.That(_passwordManager.CheckPasswordIsValidChallenge1(password), Is.EqualTo(true));
         }
 
         [Test]
-        public void CheckPasswordIsValid_GivenInvalidPassword_ReturnsFalse()
+        public void CheckPasswordIsValidChallenge1_GivenInvalidPassword_ReturnsFalse()
         {
             Password password = new Password(3, 7, 'f', "fjkljkjslkdjf");
             Assert.That(_passwordManager.CheckPasswordIsValidChallenge1(password), Is.EqualTo(false));
@@ -64,7 +64,7 @@ namespace Day2Tests
         }
 
         [Test]
-        public void HowManyPasswordsAreValid_CalculatesCorrectly()
+        public void HowManyPasswordsAreValidChallenge1_CalculatesCorrectly()
         {
             List<Password> testData = new List<Password>()
             {
@@ -74,6 +74,34 @@ namespace Day2Tests
             };
 
             Assert.That(_passwordManager.HowManyPasswordsAreValidChallenge1(testData), Is.EqualTo(2));
+        }
+
+        [Test]
+        public void CheckPasswordIsValidChallenge2_GivenValidPassword_ReturnsTrue()
+        {
+            Password password = new Password(1, 3, 'a', "fhagjalkjfuatt");
+            Assert.That(_passwordManager.CheckPasswordIsValidChallenge2(password), Is.EqualTo(true));
+        }
+
+        [Test]
+        public void CheckPasswordIsValidChallenge2_GivenInvalidPassword_ReturnsFalse()
+        {
+            Password password = new Password(3, 7, 'f', "fjkljkjslkdjf");
+            Assert.That(_passwordManager.CheckPasswordIsValidChallenge2(password), Is.EqualTo(false));
+        }
+
+        [Test]
+        public void HowManyPasswordsAreValidChallenge2_CalculatesCorrectly()
+        {
+            List<Password> testData = new List<Password>()
+            {
+                new Password(1, 3, 'a', "aasdf"), // valid
+                new Password(1, 4, 'h', "hhlkf"), // valid
+                new Password(4, 5, 't', "ttgkh"), // invalid
+                new Password(1, 2, 'v', "vvvvk")  // invalid
+            };
+
+            Assert.That(_passwordManager.HowManyPasswordsAreValidChallenge2(testData), Is.EqualTo(2));
         }
     }
 }
