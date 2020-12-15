@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Day3Library;
 using AdventOfCodeHelper;
 
@@ -10,8 +11,25 @@ namespace Day3
         {
             Toboggan toboggan = new Toboggan(3, 1);
             toboggan.mountain = Helper.readInData("data.txt");
-            int result = toboggan.HowManyTreeStrikes();
-            Console.WriteLine($"Struck {result} trees.");
+            long result = toboggan.HowManyTreeStrikes();
+            Console.WriteLine($"Route {toboggan.slopeX}, {toboggan.slopeY} struck {result} trees.");
+
+            // Challenge 2
+
+            int interimResult;
+            List<Toboggan> differentRoutes = new List<Toboggan>() { new Toboggan(1, 1), new Toboggan(5, 1), new Toboggan(7, 1), new Toboggan(1, 2) };
+            foreach (Toboggan t in differentRoutes)
+            {
+                t.mountain = toboggan.mountain;
+                interimResult = t.HowManyTreeStrikes();
+                Console.WriteLine($"Route {t.slopeX}, {t.slopeY} struck {interimResult} trees.");
+                result *= interimResult;
+            }
+            Console.WriteLine($"Multiplied together, this gives the answer {result}.");
+                
+
+
+
 
         }
     }
