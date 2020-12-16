@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lMlaCoJKt4m3GBtCvG62/FV98eOAQ8mIgVyjm27QmDBfhC1UlEob1nKaq7PyECVuKAinTRlkK57D6dbHv9KIaA==",
+  "success": true,
+  "projectFilePath": "L:\\Backup 19.1.18\\Gamedev\\Visual Studio 2019\\advent-of-code-2020\\Day4\\Day4Library\\Day4Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
