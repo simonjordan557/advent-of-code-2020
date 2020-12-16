@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AdventOfCodeHelper;
 using Day5Library;
 
@@ -21,6 +22,13 @@ namespace Day5
 
             int result = BoardingPass.GetHighestSeatID(boardingPasses);
             Console.WriteLine($"The highest seat ID of the {boardingPasses.Count} boarding passes is {result}.");
+
+            // Challenge 2
+
+            List<int> alreadyTakenSeats = BoardingPass.GetAllSeatIDs(boardingPasses);
+            List<int> allPossibleSeats = Enumerable.Range(0, 127 * 7).ToList();
+            result = BoardingPass.FindMyUniqueSeatID(alreadyTakenSeats, allPossibleSeats);
+            Console.WriteLine($"Your seat is number {result}.");
 
             
 

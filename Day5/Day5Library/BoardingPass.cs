@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,7 +16,6 @@ namespace Day5Library
 
         public BoardingPass()
         {
-
         }
 
         public BoardingPass(string data)
@@ -49,5 +49,21 @@ namespace Day5Library
             return highestSeatIDSoFar;
         }
 
+        public static List<int> GetAllSeatIDs(List<BoardingPass> boardingPasses)
+        {
+            List<int> result = new List<int>();
+            foreach (BoardingPass boardingPass in boardingPasses)
+            {
+                result.Add(boardingPass.seatID);
+            }
+            return result;
+        }
+
+        public static int FindMyUniqueSeatID(List<int> alreadyTakenSeats, List<int> allPossibleSeats)
+        {
+            List<int> availableSeats = allPossibleSeats.Except(alreadyTakenSeats).ToList();
+            List<int> result = availableSeats.Where(i => !availableSeats.Contains(i - 1) && !availableSeats.Contains(i + 1)).ToList();
+            return result[0];
+        }
     }
 }
