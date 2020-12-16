@@ -26,12 +26,9 @@ namespace Day5
             // Challenge 2
 
             List<int> alreadyTakenSeats = BoardingPass.GetAllSeatIDs(boardingPasses);
-            List<int> allPossibleSeats = Enumerable.Range(0, 127 * 7).ToList();
+            List<int> allPossibleSeats = Enumerable.Range(0, (127 * 8) + 7).ToList();
             result = BoardingPass.FindMyUniqueSeatID(alreadyTakenSeats, allPossibleSeats);
             Console.WriteLine($"Your seat is number {result}.");
-
-            
-
         }
     }
 }
