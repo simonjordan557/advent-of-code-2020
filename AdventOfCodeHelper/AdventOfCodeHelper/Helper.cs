@@ -38,10 +38,11 @@ namespace AdventOfCodeHelper
                 }
                 else
                 {
-                    rawData.Add(sb.ToString());
+                    rawData.Add(sb.ToString().Trim());
                     sb.Clear();
                 }
             }
+            rawData.Add(sb.ToString().Trim());
             sr.Close();
             return rawData;
         }
