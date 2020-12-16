@@ -53,12 +53,21 @@ namespace Day4Library
             }
 
             // Validate byr
+            if (!ValidateByr()) return false;
             // Validate iyr
+            if (!ValidateIyr()) return false;
             // Validate eyr
+            if (!ValidateEyr()) return false;
             // Validate hgt
+            if (!ValidateHgt()) return false;
             // Validate hcl
+            if (!ValidateHcl()) return false;
             // Validate ecl
+            if (!ValidateEcl()) return false;
             // Validate pid
+            if (!ValidatePid()) return false;
+
+            return true;
         }
 
         public bool ValidateByr()
@@ -97,14 +106,14 @@ namespace Day4Library
 
         public bool ValidateHcl()
         {
-            if (passportInfo["hcl"][0] != '#') return false;
+            if (!passportInfo["hcl"].StartsWith("#")) return false;
             else if (passportInfo["hcl"].Length != 7) return false;
             else
             {
-                char[] validHex = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
-                foreach (char c in passportInfo["hcl"])
+               char[] validHex = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+                for(int i = 1; i < passportInfo["hcl"].Length; i++)
                 {
-                    if (!validHex.Contains(c)) return false;
+                    if (!validHex.Contains(passportInfo["hcl"][i])) return false;
                 }
             }
             return true;
