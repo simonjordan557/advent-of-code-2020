@@ -31,7 +31,7 @@ namespace Day6
             result = 0;
             foreach (List<CustomsForm> group in customsOfficer.groupOfGroups)
             {
-                result += customsOfficer.HowManyEveryoneAnsweredYes(group);
+                result += customsOfficer.SecondTry(group);
             }
             Console.WriteLine($"The number of questions that everyone in a group answered Yes to is {result}.");
         }

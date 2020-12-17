@@ -79,6 +79,16 @@ namespace Day6Library
             return commonAnswers.Count;
         }
 
+        public int SecondTry(List<CustomsForm> input)
+        {
+            IEnumerable<char> wip = input[0].answeredYes;
+            for (int i = 1; i < input.Count; i++)
+            {
+                wip = wip.Intersect(input[i].answeredYes);
+            }
+            return wip.ToList().Count;
+        }
+
 
     }
 }
