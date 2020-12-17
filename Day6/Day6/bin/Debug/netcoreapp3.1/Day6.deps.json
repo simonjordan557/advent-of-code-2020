@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Day6/1.0.0": {
+        "dependencies": {
+          "AdventOfCodeHelper": "1.0.0",
+          "Day6Library": "1.0.0"
+        },
+        "runtime": {
+          "Day6.dll": {}
+        }
+      },
+      "AdventOfCodeHelper/1.0.0": {
+        "runtime": {
+          "AdventOfCodeHelper.dll": {}
+        }
+      },
+      "Day6Library/1.0.0": {
+        "runtime": {
+          "Day6Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Day6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdventOfCodeHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Day6Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
