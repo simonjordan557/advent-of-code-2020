@@ -59,6 +59,26 @@ namespace Day6Library
             return result;
         }
 
+        public int HowManyEveryoneAnsweredYes(List<CustomsForm> input)
+        {
+            List<char> commonAnswers = new List<char>();
+            foreach (char c in input[0].answeredYes)
+            {
+                commonAnswers.Add(c);
+            }
+            for (int i = 1; i < input.Count; i++)
+            {
+                for (int j = 0; j < commonAnswers.Count; j++)
+                {
+                    if (!input[i].answeredYes.Contains(commonAnswers[j]))
+                    {
+                        commonAnswers.RemoveAt(j);
+                    }
+                }
+            }
+            return commonAnswers.Count;
+        }
+
 
     }
 }

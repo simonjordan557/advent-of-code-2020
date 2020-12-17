@@ -25,6 +25,15 @@ namespace Day6
             }
             int result = customsOfficer.HowManyYesInAllGroups(answeredYes);
             Console.WriteLine($"The sum of all unique Yes answers in all groups is {result}.");
+
+            // Challenge 2
+
+            result = 0;
+            foreach (List<CustomsForm> group in customsOfficer.groupOfGroups)
+            {
+                result += customsOfficer.HowManyEveryoneAnsweredYes(group);
+            }
+            Console.WriteLine($"The number of questions that everyone in a group answered Yes to is {result}.");
         }
     }
 }
